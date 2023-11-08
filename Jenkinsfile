@@ -34,7 +34,7 @@ pipeline {
      stage('Deploying Node App helm chrt on eks') {
       steps {
         script {
-          sh ('aws eks update-kubeconfig --name sample --region eu-west-2')
+          sh ('aws eks update-kubeconfig --name kubix114 --region eu-west-2')
           sh "kubectl get ns"
           sh "helm install java ./java-chart"
         }
