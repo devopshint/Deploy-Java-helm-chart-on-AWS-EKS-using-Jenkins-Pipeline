@@ -7,9 +7,9 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-     - port: {{ .Values.service.port }}
-       targetPort: {{ .Values.service.targetPort }}
-       protocol: {{ .Values.service.protocol }}
-       name: {{ .Values.service.name }}
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      protocol: {{ .Values.service.protocol }}
+      name: {{ .Values.service.name }}
   selector:
     {{- include "java-chart.selectorLabels" . | nindent 4 }}
