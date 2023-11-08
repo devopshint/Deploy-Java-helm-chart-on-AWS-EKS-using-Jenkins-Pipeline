@@ -9,7 +9,11 @@ pipeline {
                 }
             }
         }
-     
+     stage('mvn'){
+       steps {
+         sh 'mvn package'
+       }
+     }
   
      stage('Build Node JS Docker Image') {
             steps {
