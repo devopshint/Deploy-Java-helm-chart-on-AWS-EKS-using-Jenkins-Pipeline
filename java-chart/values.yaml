@@ -42,9 +42,9 @@ securityContext: {}
 service:
   type: LoadBalancer
   port: 80
-  TargetPort: 8080
-  protocol: TCP
-  name: java-chart
+targetPort: 8080
+protocol: TCP
+name: java-chart
 
 ingress:
   enabled: false
