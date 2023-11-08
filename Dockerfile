@@ -3,7 +3,7 @@ FROM docker.io/library/tomcat:9@sha256:6ddfc8c16a3f8a1c2c4258d37921e73d0d181b57f
 
 WORKDIR /usr/local/tomcat/webapps/
 
-COPY /var/lib/jenkins/workspace/demoproject/target/hello-1.0.war /var/lib/jenkins/workspace/demoproject/
+
 
 # or
 
