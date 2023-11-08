@@ -5,7 +5,7 @@ pipeline {
     stage("Clone code from GitHub") {
             steps {
                 script {
-                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_CREDENTIALS', url: 'https://github.com/kubade220/Deploy-Java-helm-chart-on-AWS-EKS-using-Jenkins-Pipeline/']])
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_CREDENTIALS', url: 'https://github.com/kubade220/Deploy-Java-helm-chart-on-AWS-EKS-using-Jenkins-Pipeline//']])
                 }
             }
         }
