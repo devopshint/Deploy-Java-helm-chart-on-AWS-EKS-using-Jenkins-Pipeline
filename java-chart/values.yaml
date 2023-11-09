@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: kubade220/java-1.0
+  repository: ec2-35-163-51-224.us-west-2.compute.amazonaws.com/kubade220
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
