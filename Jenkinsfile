@@ -9,7 +9,11 @@ pipeline {
                 }
             }
         }
-     
+      stage('mvn') {
+      steps {
+          sh 'mvn package'
+      }
+  }
   
      stage('Build Node JS Docker Image') {
             steps {
@@ -23,18 +27,19 @@ pipeline {
         stage('Deploy Docker Image to DockerHub') {
             steps {
                 script {
-                 withCredentials([string(credentialsId: 'kubade220', variable: 'kubade220')]) {
-                    sh 'docker login -u kubade220 -p ${kubade220}'
+                 withCredentials([string(credentialsId: 'kubade220', variable: 'kontynopol123')]) {
+                    sh 'docker login -u kubade220 -p ${kontynopol123}'
             }
             sh 'docker push kubade220/java-1.0'
         }
             }   
         }
-         
+        
+        
      stage('Deploying Node App helm chrt on eks') {
       steps {
         script {
-          sh ('aws eks update-kubeconfig --name sample --region us-west-2')
+          sh ('aws eks update-kubeconfig --name 314864436782 --region us-west-2')
           sh "kubectl get ns"
           sh "helm install java ./java-chart"
         }
