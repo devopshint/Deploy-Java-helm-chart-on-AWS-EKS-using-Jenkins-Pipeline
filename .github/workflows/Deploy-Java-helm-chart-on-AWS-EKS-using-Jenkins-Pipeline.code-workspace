@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"github-actions.workflows.pinned.workflows": [
+			".github/workflows/aws.yml"
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "Invoke Lambda with API Gateway",
+				"invokeTarget": {
+					"target": "api",
+					"templatePath": "Template Location",
+					"logicalId": "Function Logical ID"
+				},
+				"api": {
+					"path": "Path",
+					"httpMethod": "Method",
+					"payload": {
+						"json": {}
+					}
+				}
+			}
+
+		]
+	}
+}
