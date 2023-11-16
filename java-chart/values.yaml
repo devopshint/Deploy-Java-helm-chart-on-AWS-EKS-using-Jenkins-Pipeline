@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: devopshint/java-1.0
+  repository: kubade220/java-1.0
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -55,7 +55,7 @@ ingress:
   hosts:
     - host: chart-example.local
       paths:
-        - path: /
+        - path: /hello-1.0
           pathType: ImplementationSpecific
   tls: []
   #  - secretName: chart-example-tls
