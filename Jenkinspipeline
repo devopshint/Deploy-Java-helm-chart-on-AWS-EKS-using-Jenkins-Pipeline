@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+    
+    stages{
+        stage('Git clone'){
+            steps{
+                script{
+                    checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/devopshint/Deploy-Java-helm-chart-on-AWS-EKS-using-Jenkins-Pipeline.git']])
+                }
+            }
+        }
+        stage('mvn'){
+            steps{
+                sh 'mvn package'
+            }
+        }
+        stage('BUild Java Docker Image'){
+            steps{
+                sh 'docker build -t devopshint/java-1.0 .'
+            }
+        }
+    }
+}
